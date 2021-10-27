@@ -52,24 +52,26 @@ function Carlist() {
   }
 
   const columns = [
-    {field: 'brand', sortable: true, filter: true, maxWidth: 120},
-    {field: 'model', sortable: true, filter: true, maxWidth: 120},
-    {field: 'color', sortable: true, filter: true, maxWidth: 120},
-    {field: 'fuel', sortable: true, filter: true, maxWidth: 120},
-    {field: 'year', sortable: true, filter: true, maxWidth: 120},
-    {field: 'price', sortable: true, filter: true, maxWidth: 120},
+    {field: 'brand', sortable: true, filter: true, maxWidth: 140},
+    {field: 'model', sortable: true, filter: true, maxWidth: 140},
+    {field: 'color', sortable: true, filter: true, maxWidth: 140},
+    {field: 'fuel', sortable: true, filter: true, maxWidth: 140},
+    {field: 'year', sortable: true, filter: true, maxWidth: 140},
+    {field: 'price', sortable: true, filter: true, maxWidth: 140},
     {field: '_links.self.href', sortable: false, filter: false, 
       cellRenderer: "editButtonRenderer",
       cellRendererParams: {
         updateCar: updateCar,
-      }
+      },
+      headerName: "",
     },
     {field: '_links.self.href', sortable: false, filter: false, 
       cellRenderer: "deleteButtonRenderer", 
       cellRendererParams: {
         deleteCar: deleteCar
       },
-      maxWidth: 160
+      maxWidth: 160,
+      headerName: "",
     },
   ]
 
